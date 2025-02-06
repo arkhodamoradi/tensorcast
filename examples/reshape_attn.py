@@ -23,13 +23,13 @@ def manual_reshape_3D(tensor, b3, b2, b1, equation="abc->abc"):
     _idx = 0
     _idx_1d = 0
 
-    for i3 in range(loop_A[0]//loop_B[0]): # 1357/1=1357
+    for i3 in range(loop_A[0]//loop_B[0]): 
         P3 = i3*loop_B[0]*loop_A[1]*loop_A[2] # move to address
 
-        for i2 in range(loop_A[1]//loop_B[1]): # 1/1=1
+        for i2 in range(loop_A[1]//loop_B[1]): 
             P2 = i2*loop_B[1]*loop_A[2] # move to address
 
-            for i1 in range(loop_A[2]//loop_B[2]): # 1536/64=24
+            for i1 in range(loop_A[2]//loop_B[2]): 
                 P1 = i1*loop_B[2] # move to address
 
                 for j3 in range(loop_B[0]): # 1
